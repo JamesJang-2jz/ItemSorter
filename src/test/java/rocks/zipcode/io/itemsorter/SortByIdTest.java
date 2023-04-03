@@ -31,7 +31,6 @@ public class SortByIdTest {
         // then
         Assert.assertArrayEquals(expected, actual);
     }
-
     @Test
     public void test2() {
         // given
@@ -42,14 +41,11 @@ public class SortByIdTest {
         Item[] expected = {item3, item2, item1};
         ItemSorter itemSorter = new ItemSorter(itemsToSort);
         Comparator<Item> comparator = (Comparator<Item>) new IdComparator();
-
         // when
         Item[] actual = itemSorter.sort(comparator);
-
         // then
         Assert.assertArrayEquals(expected, actual);
     }
-
     @Test
     public void test3() {
         // given

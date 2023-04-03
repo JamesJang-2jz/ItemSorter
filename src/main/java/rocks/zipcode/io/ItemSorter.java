@@ -12,13 +12,12 @@ public class ItemSorter {
 
     Item[] itemArray;
 
-
     public ItemSorter(Item[] items) {
         itemArray = items;
     }
-
     public Item[] sort(Comparator<Item> comparator) {
-        Arrays.sort(itemArray);
+        Arrays.sort(itemArray, comparator); // sort. first parameter is array to sort, second is parameter to sort by
+        System.out.println(Arrays.toString(itemArray));
         return itemArray;
     }
 }
